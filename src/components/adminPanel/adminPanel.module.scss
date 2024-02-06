@@ -1,0 +1,22 @@
+.button_list {
+    padding: 0;
+    list-style-type:  none;
+    li {
+        cursor: pointer;
+        display: inline;
+        margin: 0 20px;
+        font-size: 30px;
+        //border-bottom: 3px solid #000;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        background-position: 0% 100%;
+        transition: background-size .3s;
+    }
+    li:hover {
+        background-size: 100% 2px;
+    }
+    .inset_active {
+        background-size: 100% 2px;
+    }
+}

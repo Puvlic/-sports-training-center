@@ -21,6 +21,9 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "node_modules/filesaver.js-npm/FileSaver.js",
+    "node_modules/filesaver.js-npm/FileSaver.js",
+    "node_modules/filesaver.js-npm/FileSaver.js"
   ]
 }

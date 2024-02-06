@@ -1,0 +1,63 @@
+.profile_wrapper{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.buttons_wrapper {
+    button {
+        color: rgb(232, 232, 232);
+        margin: 10px 20px;
+        width: 170px;
+        background: rgb(45, 45, 45);
+        padding: 7px;
+        border: 2px rgb(98, 98, 98) solid;
+        border-radius: 50px;
+        transition: box-shadow 0.3s ease-in-out;
+        font-size: 15px;
+        a {
+            text-decoration: none;
+        }
+        &:hover {
+            box-shadow: 0 0 5px rgba(0,0,0,1);
+            cursor: pointer;
+        }
+    }
+}
+
+.admin_panel_button {
+    color: rgb(232, 232, 232);
+    margin: 10px 20px;
+    width: 170px;
+    background: rgb(45, 45, 45);
+    padding: 7px;
+    border: 2px rgb(98, 98, 98) solid;
+    border-radius: 50px;
+    transition: box-shadow 0.3s ease-in-out;
+    font-size: 15px;
+    a {
+        text-decoration: none;
+    }
+    &:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,1);
+        cursor: pointer;
+    }
+}
+
+.user_info {
+    margin: 0 auto;
+    width: 35%;
+    padding: 30px;
+    border: 2px rgb(98, 98, 98) solid;
+    border-radius: 30px;
+    text-align: start;
+    background: rgb(45, 45, 45);
+    color: rgb(232, 232, 232);
+    .user_name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+        font-size: 30px;
+    }
+}

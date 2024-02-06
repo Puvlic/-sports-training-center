@@ -1,0 +1,51 @@
+.training_camps_wrapper {
+
+}
+
+.training_camp_block {
+  margin: 20px auto;
+  padding: 20px;
+  color: rgb(232, 232, 232);
+  background: rgb(45, 45, 45);
+  width: 40%;
+  border: 2px rgb(98, 98, 98) solid;
+  border-radius: 50px;
+  .training_camp_name {
+    font-size: 25px;
+  }
+  p {
+    margin: 7px;
+  }
+  a {
+    color: rgb(232, 232, 232);
+    cursor: pointer;
+  }
+}
+
+.empty_training_camp_title {
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+}
+
+.button_margin {
+  margin-top: 20px;
+}
+
+.back_button {
+  margin: 15px auto;
+  width: 150px;
+  button {
+    width: 150px;
+    background: rgb(232, 232, 232);
+    padding: 7px;
+    border: 2px rgb(98, 98, 98) solid;
+    border-radius: 50px;
+    transition: box-shadow 0.3s ease-in-out;
+    font-size: 15px;
+  }
+  button:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+    cursor: pointer;
+  }
+}

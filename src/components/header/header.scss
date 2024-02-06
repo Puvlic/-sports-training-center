@@ -1,0 +1,92 @@
+$header_tiles_color: rgb(238, 238, 238);
+
+.header {
+  ul {
+    padding: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background: rgb(43, 43, 43);
+    color: $header_tiles_color;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      position: relative;
+      float: left;
+      cursor: pointer;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      transition: background .2s ease-in-out;
+      ul {
+        display: none;
+        flex: 1;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background: rgb(43, 43, 43);
+        li {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 12.5px 0px 12.5px 0px;
+          a {
+            color: rgb(238, 238, 238);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .profile_inset:hover .semi_menu {
+      display: flex;
+      background: rgb(105, 105, 105);
+    }
+    li:hover {
+      background: coral;
+    }
+  }
+
+}
+
+.logout_preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+  background: rgba(0, 0, 0, 0.4) url('../../icons/preloader.svg') no-repeat center 50%;
+  backdrop-filter: blur(10px);
+}
+
+.open_logout_preloader {
+  display: block;
+}
+
+.closed_logout_preloader {
+  display: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: 12.5px 15px 12.5px 10px;
+  text-decoration: none;
+  color: $header_tiles_color;
+}
+
+.icon {
+  padding-right: 3px;
+  stroke: rgb(238, 238, 238);
+  fill: $header_tiles_color;
+  color: $header_tiles_color;
+  //width: 25px;
+  //height: 25px;
+}

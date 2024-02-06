@@ -1,0 +1,60 @@
+.subscription_wrapper {
+  background: rgb(45, 45, 45);
+  width: 40%;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px rgb(98, 98, 98) solid;
+  border-radius: 30px;
+  display: grid;
+  grid-template-areas:
+  "info req";
+}
+
+.subscription_info_block {
+  grid-area: info;
+  p {
+    text-align: left;
+    color: rgb(232, 232, 232);
+    margin: 14px;
+  }
+}
+
+.subscription_name {
+  font-size: 26px;
+}
+
+.requisites_block {
+  grid-area: req;
+  display: flex;
+  flex-direction: column;
+  p {
+    color: rgb(232, 232, 232);
+  }
+  button {
+    margin: 15px auto;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 170px;
+    font-size: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 5px rgba(232,232,232,1);
+      cursor: pointer;
+    }
+  }
+  input {
+    margin: 0 auto;
+    width: 160px;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 7px;
+  }
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}

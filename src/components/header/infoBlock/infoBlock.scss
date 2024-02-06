@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    cursor: pointer;
+  }
+}
+
+.information {
+  display: flex;
+  font-size: 20px;
+  div {
+    padding-right: 13px;
+    display: flex;
+    justify-content: center;
+  }
+}

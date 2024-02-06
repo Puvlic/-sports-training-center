@@ -1,0 +1,15 @@
+.tooltip_wrapper {
+  padding: 20px;
+  width: 200px;
+  border: 2px solid rgb(43, 43, 43);
+  border-radius: 15px;
+  color: rgb(43, 43, 43);
+  background: rgb(238, 238, 238);
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+}

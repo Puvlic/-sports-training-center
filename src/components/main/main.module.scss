@@ -1,0 +1,47 @@
+.img_styling {
+    width: 400px;
+    height: 600px;
+}
+
+.sport_block_wrapper {
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    margin-top: 50px;
+}
+
+.sport_block_info_section {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+.sport_block_bottom_button {
+    background: rgb(238, 238, 238);
+    align-self: flex-start;
+    padding: 7px;
+    border: 1px #000 solid;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    button {
+        border: none;
+        background: none;
+        font-size: 18px;
+    }
+    &:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,1);
+        cursor: pointer;
+    }
+}
+
+.text_block {
+    margin-right: 40px;
+    width: 400px;
+    text-align: justify;
+    font-size: 30px;
+}

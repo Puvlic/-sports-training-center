@@ -1,0 +1,47 @@
+.event_page_wrapper {
+  background: rgb(43, 43, 43);
+  color: rgb(238, 238, 238);
+  width: 40%;
+  margin: 30px auto 0;
+  padding: 30px;
+  border: 4px rgb(115, 114, 114) solid;
+  border-radius: 40px;
+}
+
+.event_page_button {
+  padding: 7px;
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 150px;
+  margin: 5px;
+  font-size: 15px;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    cursor: pointer;
+  }
+}
+
+.button_margin {
+  margin-top: 15px;
+}
+
+.back_button {
+  margin: 15px auto;
+  width: 150px;
+  button {
+    width: 150px;
+    background: rgb(232, 232, 232);
+    padding: 7px;
+    border: 2px rgb(98, 98, 98) solid;
+    border-radius: 50px;
+    transition: box-shadow 0.3s ease-in-out;
+    font-size: 15px;
+    color: black;
+  }
+  button:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+    cursor: pointer;
+  }
+}
