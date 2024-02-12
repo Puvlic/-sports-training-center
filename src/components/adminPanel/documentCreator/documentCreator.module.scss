@@ -7,8 +7,21 @@
 }
 
 .button_block {
-  margin-bottom: 20px;
+  margin: 20px 0;
   .button_block_element {
-
+    width: 150px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 10px 20px;
+    font-size: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+    background: rgb(232,232,232);
+    color: black;
+    text-decoration: none;
+    &:hover {
+      box-shadow: 0 0 5px rgba(0,0,0,1);
+      cursor: pointer;
+    }
   }
 }
