@@ -8,6 +8,9 @@ import CompetitionsAP from "./competitionsAP/competitionsAP";
 import {ICompetition, IEvent} from "../../types/calendarTypes";
 import {getSportName} from "../events/competition/getCompetition";
 import TrainingCampsAP from "./trainingCampsAP/trainingCampsAP";
+import UsersAP from "./usersAP/usersAP";
+import {IUser} from "../../types/userTypes";
+import {getAllUsers} from "./getUsers";
 
 interface ITrainingProps {
     trainings: ITraining[]
@@ -19,6 +22,10 @@ interface ITrainingCampsProps {
 
 interface ICompetitionProps {
     competitions: ICompetition[] | null
+}
+
+interface IUsersProps {
+    users: IUser[] | null
 }
 
 const activeInset = {
@@ -36,6 +43,9 @@ const AdminPanel = () => {
     const {fetchTrainings, fetchCompetitions, fetchTrainingCamps} = useActions()
     const {trainings, loading} = useTypedSelector(state => state.trainings)
     const {competitions, events} = useTypedSelector(state => state.calendar)
+    const [users, setUsers] = useState<IUsersProps>({
+        users: []
+    })
 
     const trainingsProps: ITrainingProps = {
         trainings: trainings
@@ -50,7 +60,7 @@ const AdminPanel = () => {
     }
 
     useEffect(() => {
-            fetchTrainings()
+        fetchTrainings()
     }, []);
 
     useEffect(() => {
@@ -60,6 +70,17 @@ const AdminPanel = () => {
     useEffect(() => {
         fetchTrainingCamps()
     }, []);
+
+    useEffect(() => {
+        const getUsers = async () => {
+            let users = await getAllUsers()
+            setUsers({
+                users: users
+            })
+        }
+
+        getUsers().then()
+    }, [])
 
     const [insetsParams, setInsetsParams] = useState({
         trainings: activeInset,
@@ -141,6 +162,9 @@ const AdminPanel = () => {
                 )}
                 {insetsParams.competitions.active && (
                     <CompetitionsAP {...competitionProps}/>
+                )}
+                {insetsParams.users.active && (
+                    <UsersAP {...users}/>
                 )}
             </div>
         </div>

@@ -2,6 +2,8 @@ import React from 'react';
 import {IEvent} from "../../../types/calendarTypes";
 import style from "./trainingCampsAP.module.scss"
 import {NavLink} from "react-router-dom";
+import {generateDocument} from "../createDocument/createDocument";
+import {documentTypes} from "../createDocument/documentTemplates/documentTypes";
 
 interface ITrainingCampsAP {
     trainingCamps: IEvent[] | null
@@ -26,11 +28,9 @@ const TrainingCampsAP: React.FC<ITrainingCampsAP> = (props) => {
                                 Список участников
                             </button>
                         </NavLink>
-                        <NavLink to='/profile/admin_panel/document_creator'>
-                            <button className={style.button}>
-                                Создать отчет
-                            </button>
-                        </NavLink>
+                        <button className={style.button} onClick={() => generateDocument(documentTypes.trainingCamps, trainingCamp.id)}>
+                            Создать отчет
+                        </button>
                     </div>
                 </div>
             ))}

@@ -16,7 +16,6 @@ import TrainingsPage from "./components/Profile/trainings/trainingsPage";
 import Competition from "./components/events/competition/competition";
 import CompetitionPage from "./components/Profile/competitionsPage/competitionPage";
 import AdminPanel from "./components/adminPanel/adminPanel";
-import DocumentCreator from "./components/adminPanel/documentCreator/documentCreator";
 
 function App() {
     return (
@@ -38,7 +37,6 @@ function App() {
                     <Route path='/profile/competitions' element={<CompetitionPage />}></Route>
                     <Route path='/trainings' element={<Trainings />}></Route>
                     <Route path='/profile/admin_panel' element={<AdminPanel />}></Route>
-                    <Route path='/profile/admin_panel/document_creator' element={<DocumentCreator />}></Route>
                 </Routes>
             </BrowserRouter>
         </div>

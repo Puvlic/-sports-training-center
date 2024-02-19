@@ -3,6 +3,9 @@ import {ICompetition} from "../../../types/calendarTypes";
 import style from "./competitionsAP.module.scss";
 import {NavLink} from "react-router-dom";
 import {getSportName} from "../../events/competition/getCompetition";
+import {generateDocument} from "../createDocument/createDocument"
+import {documentTypes} from '../createDocument/documentTemplates/documentTypes'
+
 interface ICompetitionAP {
     competitions: ICompetition[] | null
 }
@@ -47,11 +50,9 @@ const CompetitionsAP: React.FC<ICompetitionAP> = (props) => {
                                 Список участников
                             </button>
                         </NavLink>
-                        <NavLink to='/profile/admin_panel/document_creator'>
-                            <button className={style.button}>
-                                Создать отчет
-                            </button>
-                        </NavLink>
+                        <button className={style.button} onClick={() => generateDocument(documentTypes.competition, competition.id)}>
+                            Создать отчет
+                        </button>
                     </div>
                 </div>
             ))}
